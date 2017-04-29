@@ -62,9 +62,9 @@
 	          					tag = 1;
 	          				}
 	          				if(_this.areas==''){
-          						 layer.open({content: '请选择地址',skin: 'msg',time: 2});								  
-	          					tag = 0;
-	          					return
+          						//  layer.open({content: '请选择地址',skin: 'msg',time: 2});
+	          					// tag = 0;
+	          					// return
 	          				}else{
 	          					tag = 1;
 	          				}
@@ -128,7 +128,7 @@
 						_this.userInfo = _this.name+'-'+sex+'-'+_this.tel+'-'+_this.school+'-'+area+'-'+bed_reservation+'-'+_this.wechat+';';
 						_this.userMessage=_this.description+'+'+_this.userInfo;
 						console.log(_this.userInfo);
-						this.$http.patch("https://api.github.com/repos/BlueZhou/redGoCustrom?access_token=4649defe73cb035f6a59eb3b910caa5998b2fd51",
+						this.$http.patch("https://api.github.com/repos/BlueZhou/redGoCustrom?access_token=dcdf279c852222fa61fd06935ae01ff65260d8e2",
 		          			{"name":"redGoCustrom","description":this.userMessage}
 		          			).then(function(res){
 		          				layer.open({content: '恭喜你，报名成功',skin: 'msg',time: 5});
