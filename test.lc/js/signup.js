@@ -128,7 +128,7 @@
 						_this.userInfo = _this.name+'-'+sex+'-'+_this.tel+'-'+_this.school+'-'+area+'-'+bed_reservation+'-'+_this.wechat+';';
 						_this.userMessage=_this.description+'+'+_this.userInfo;
 						console.log(_this.userInfo);
-						this.$http.patch("https://api.github.com/repos/Jam741/redGoCustrom?access_token=af4710b4fd29a0188802de51c1ae66b90d1c163b",
+						this.$http.patch("https://api.github.com/repos/BlueZhou/redGoCustrom?access_token=4649defe73cb035f6a59eb3b910caa5998b2fd51",
 		          			{"name":"redGoCustrom","description":this.userMessage}
 		          			).then(function(res){
 		          				layer.open({content: '恭喜你，报名成功',skin: 'msg',time: 5});
