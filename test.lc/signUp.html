@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    	<link rel="stylesheet" href="css/swiper.css">
+    	<link rel="stylesheet" href="css/common.css">
+    	<link rel="stylesheet" href="css/layer.css?2.0">
+    	 <link rel="stylesheet" href="css/LArea.css">
+    	<script type="text/javascript" src="js/jquery.min.js"></script>
+    	<script type="text/javascript" src="js/vue.js"></script>
+    	<script type="text/javascript" src="js/layer.js"></script>
+    	<script type="text/javascript" src="js/vue-resource.js"></script>
+    	<script src="js/LAreaData1.js"></script>
+		<script src="js/LArea.js"></script>
+
+		<title></title>
+	</head>
+	<body>
+		<div id='page'>
+			<div class="swiper-slide page_container page4">
+               <div class="page_main">
+               	<div class="return" onclick="javascript:history.back(-1);"><img src="img/return.png" alt="" /></div>
+               	<div style="clear: both;"></div>
+                        <form action="" id='form'>
+                            <div class="message_div">
+                                <label for="name">姓&ensp;&ensp;&ensp;&ensp;名</label>
+                                <input type="text" id="name" placeholder="" value="" v-model="name"/>
+                            </div>
+                            <div class="message_div">
+                                <label for="sex">姓&ensp;&ensp;&ensp;&ensp;别</label>
+                                <i class='select'></i>
+                                <input type="text" v-on:click="sex_show(this)" id="sex" v-bind:placeholder="sex" v-bind:value="sex" readonly=""/>
+                         
+                            </div>
+                            <div class="message_div">
+                                <label for="tel">手机号码</label>
+                                <input type="tel" id="tel" v-model="tel" placeholder="" value=""/>
+                            </div>
+                            <div class="message_div">
+                                <label for="school">在读中学</label>
+                                <input type="text" id="school" v-model="school" placeholder="" value=""/>
+                                
+                            </div>
+                            <div class="message_div">
+                            	<i class='select'></i>
+                                <label for="area">先居区域</label>
+                                <input type="text" id="area" placeholder=""  readonly=""/>
+                                <input id="value1" type="hidden" v-model="areas"/>
+                            
+                            </div>
+                            <div class="message_div">
+                                <label for="bed_reservation">床位预定</label>
+                                <i class='select'></i>
+                                <input type="text" v-on:click='bed_show()' id="bed_reservation" v-bind:placeholder="bed" v-bind:value="bed" readonly=""/>
+                            
+                            </div>
+                            <div class="message_div">
+                                <label for="wechat">微信号码</label>
+                                <input type="text" id="wechat" v-model="wechat" placeholder="" value=""/>
+                            </div>
+                            <div class="message_div">
+                                <label for="qq">QQ号码</label>
+                                <input type="tel" id="qq" v-model="qq" placeholder="" value=""/>
+                            </div>
+                            
+                        </form>
+                        <p class="redFont font12" >
+                            <span class="redFont">*</span>
+                                                                    预约报名用于寝室及名额预约，最终红土地根据实际情况进行安排，届时可调整！
+                        </p>
+                        <button class="button" v-on:click='validate()'>提交报名</button>
+                    </div>
+               </div>
+                  
+          <div class='model-shadow' id='beds' v-bind:style="{'height':height}">
+          	<div class='model-content'>          	
+          		<div class='title'>请选择</div>
+          		<ul class='select_show' >
+                    <li v-for="item in bed_select" v-on:click='changebed_init($event)'>{{item.name}}</li>             
+                </ul>
+          	</div>
+          </div>
+          
+          <div class='model-shadow' id='sexs' v-bind:style="{'height':height}">
+          	<div class='model-content'>          	
+          		<div class='title'>请选择</div>
+          		<ul class='select_show'>
+                    <li  v-for="item in sex_select" v-on:click='change_init($event)'>{{item.name}}</li>                                  
+                </ul>
+          	</div>
+		</div>
+   	
+        </div>
+    	<script type="text/javascript" src="js/signup.js"></script>
+    	
+    	<script>
+		    var area1 = new LArea();
+		    area1.init({
+		        'trigger': '#area',
+		        'valueTo': '#value1',
+		        'keys': {
+		            id: 'id',
+		            name: 'name'
+		        }, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+		        'type': 1,
+		        'data': LAreaData
+		    });
+		    area1.value=[1,13,3];
+    </script>
+	</body>
+</html>

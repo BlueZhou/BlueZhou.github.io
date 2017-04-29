@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    	<link rel="stylesheet" href="css/swiper.css">
+    	<link rel="stylesheet" href="css/common.css">
+    	<script type="text/javascript" src="js/jquery.min.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<div class="page_container page3">
+            <div class="page_main">
+                <div class="return" onclick="javascript:history.back(-1);"><img src="img/return.png" alt="" /></div>
+                <div class="button_div">
+                	<button class="button wechat"><i></i> 微信 | QQ咨询</button>
+                    <a href="signUp.html"><button class="button baoming"><i></i>预报名(定床位)</button></a>
+                    <button class="button phone"><i></i>电话详细咨询</button>
+                </div>
+                    <div class="grayFont" style="width: 92%;margin-left:4%"><span class="redFont">*&nbsp;&nbsp;</span>预约报名成功即获得超值大礼包
+						<br> ( <span class="redFont">精美画册 + 床上用品三件套 + 色<br>彩素描笔套装 + 惊喜小礼物哟~</span>）</div>
+                </div>
+          </div>
+          <div class='model-shadow' id='wechat'>
+          	<div class='model-content'>          	
+          		<img src="img/qing.gif" alt="" style="width: 100%" />
+          	</div>
+          </div>
+	</body>
+	<script>
+		$(function(){
+			$('#wechat').click(function(){
+				$(this).css('display','none');
+			})
+			$('.wechat').click(function(){
+				$('#wechat').css('display','block');
+				$('#wechat .model-content').css('marginTop',$(window).height()/3);
+			})
+				$('.button_div').css('padding-top',$('.page_container').height()/5);
+			$(window).resize(function(){
+				$('.button_div').css('padding-top',$('.page_container').height()/5);
+			})
+			$('.phone').click(function () {
+				alert("13888888888")
+            })
+			
+		})
+	</script>
+</html>

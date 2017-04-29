@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>红土地</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script type='text/javascript' src='js/jquery.min.js'></script>
+
+    <style>
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide page_container_1  page1">
+                <header>
+                    <ul>
+                        <li><a class='nav_current' href="">首页</a></li>
+                        <li><a href="goRed.html">走进红土地</a></li>
+                        <li><a href="myLife.html">我们的生活</a></li>
+                        <li><a href="paintingOnline.html">作品</a></li>
+                        <li><a href="enrollStudent.html">招生信息</a></li>
+                    </ul>
+                </header>
+                <div class="main-bg">
+                    <div class="page_main">
+                        <div class="marginT30" style="margin-top:0.8rem">
+                            <img class="img_top" src="img/1.png" alt=""/>
+                            <h3 class="title">给予更多可能的</h3>
+                            <h3 class="title redFont">一片红土地！</h3>
+                        </div>
+                        <p class="first-p grayFont marginB10">艺术文化教育的日渐兴盛，为面向全行业的美术专业带来了更多的选择，在红土地这片沃土上，带给你们更多的可能性！</p>
+                        <p class="redFont" style="text-align: center;">红土地艺术培训学校，专注美术高考13年</p>
+                        <p class="redFont" style="text-align: center;">给予孩子更美好的未来！</p>
+                        <a href="consultation.html"><button class="button">立即咨询 & 预报名</button></a>
+                        <p class="redFont p_title">为什么选择美术艺考?</p>
+                        <img class="img-point" src="img/icon_point.png" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide page_container page2">          
+                <div class="main-bg">
+                    <div class="page_main">
+                        <h5 class="grayFont"></h5>                
+                        <p class="textleft grayFont" style="margin-top:0.5rem;text-indent: 2em;">近年来美术艺考热度不断上升，江苏省甚至首先试点将美术设为中考科目。如果你对美术专业以及美术生就业前景还不了解，不妨看看下面的内容吧！美术是一个应用性很强的专业。伴随经济发展，各行各业的兴起需要大量的艺术专业人才。
+                    		<span class='redFont'>建筑、绘画、平面设计、雕塑、环境艺术、互联网、动画、服装设计、摄影、影视传播、工业产品、装潢艺术、数码媒体等</span>
+                    		可服务于全产业的高薪职业，都是改革之下快速发展的典型。这些行业具备的高设计、高美学属性，使其涉及的大量工作内容都需要从业人员具备相应的美术基础。美术艺考则成为了你与这些巨大、优质就业市场之间的连接。选择美术艺考，就是选择有更多可能的未来！</p>   
+                    </div>
+                </div>
+            </div>          
+            
+        </div>
+    </div>
+    <script src="js/swiper.min.js"></script>
+    
+    <script>
+    $(function(){
+    	 $('.page2').css('margin-top',$(window).height());
+    	 $(window).resize(function(){
+    	 	$('.page2').css('margin-top',$(window).height());
+    	 })
+    })
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        direction: 'vertical',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween:0,
+        mousewheelControl: true
+    });
+    </script>
+</body>
+</html>
