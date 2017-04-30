@@ -126,7 +126,7 @@
 						var sex = document.getElementById('sex').value;
 						var area = document.getElementById('area').value;
 						var bed_reservation = document.getElementById('bed_reservation').value;
-						_this.userInfo = _this.name+'-'+sex+'-'+_this.tel+'-'+_this.school+'-'+area+'-'+bed_reservation+'-'+_this.wechat+_this.qq+';';
+						_this.userInfo = _this.name+'-'+sex+'-'+_this.tel+'-'+_this.school+'-'+area+'-'+bed_reservation+'-'+_this.wechat+'-'+_this.qq+';';
 						_this.userMessage=_this.description+'+'+_this.userInfo;
 						console.log(_this.userInfo);
 						// this.$http.patch("https://api.github.com/repos/BlueZhou/redGoCustrom?access_token=dcdf279c852222fa61fd06935ae01ff65260d8e2",
