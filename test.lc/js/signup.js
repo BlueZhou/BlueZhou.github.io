@@ -19,6 +19,7 @@
           			school:'',
           			areas:'',
           			wechat:'',
+                    qq:'',
           			userMessage:''
           		},
           		methods:{
@@ -125,18 +126,25 @@
 						var sex = document.getElementById('sex').value;
 						var area = document.getElementById('area').value;
 						var bed_reservation = document.getElementById('bed_reservation').value;
-						_this.userInfo = _this.name+'-'+sex+'-'+_this.tel+'-'+_this.school+'-'+area+'-'+bed_reservation+'-'+_this.wechat+';';
+						_this.userInfo = _this.name+'-'+sex+'-'+_this.tel+'-'+_this.school+'-'+area+'-'+bed_reservation+'-'+_this.wechat+_this.qq+';';
 						_this.userMessage=_this.description+'+'+_this.userInfo;
 						console.log(_this.userInfo);
-						this.$http.patch("https://api.github.com/repos/BlueZhou/redGoCustrom?access_token=dcdf279c852222fa61fd06935ae01ff65260d8e2",
-		          			{"name":"redGoCustrom","description":this.userMessage}
-		          			).then(function(res){
-		          				layer.open({content: '恭喜你，报名成功',skin: 'msg',time: 5});
-		          				console.log(res);
-		          			}).catch(e=>{
-		          				console.log(e)
-		          			})
-			          })	
+						// this.$http.patch("https://api.github.com/repos/BlueZhou/redGoCustrom?access_token=dcdf279c852222fa61fd06935ae01ff65260d8e2",
+		          		// 	{"name":"redGoCustrom","description":this.userMessage}
+		          		// 	).then(function(res){
+		          		// 		layer.open({content: '恭喜你，报名成功',skin: 'msg',time: 5});
+		          		// 		console.log(res);
+		          		// 	}).catch(e=>{
+		          		// 		console.log(e)
+		          		// 	})
+
+                            _czc.push(["_trackEvent",_this.name,"报名",_this.userInfo]);
+                            // _czc.push(["_setCustomVar","sin",_this.userInfo]);
+
+                            layer.open({content: '恭喜你，报名成功',skin: 'msg',time: 5});
+
+                            console.log(_this.userInfo)
+			          })
           			
           			}
         		}
